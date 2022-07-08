@@ -864,7 +864,7 @@ a {
 
 #footer {
     height: 760px;
-    background: url(/img/FOOTER.png) ;
+    background: url(img/FOOTER.png) ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
