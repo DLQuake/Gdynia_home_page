@@ -1,0 +1,177 @@
+.footer {
+    height: 760px;
+    background: url("/img/contact_us/footer/FOOTER.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include flex(row, normal, normal, nowrap);
+
+    .footer_left {
+        @include dimensions(50%, auto, 100px, 0, 120px, 100px, 100px);
+        @include flex(column, normal, flex-start, nowrap);
+
+        .logo{
+            @include dimensions(170px, 100px, 10px, 10px, 10px, 10px, 0);
+        }
+
+        .footer_tekst {
+            @include dimensions(auto, 251px, 0, 0, 0, 0, 45px);
+            @include flex(column, normal, flex-start, nowrap);
+
+            .email {
+                @include font(500, 25px, 32px, right);
+                @include flex(column, normal, flex-start, nowrap);
+                height: 32px;
+                color: $white;
+            }
+
+            .adres {
+                @include font(500, 25px, 32px, left);
+                height: 32px;
+                color: $white;
+            }
+
+            .linkedin {
+                @include flex(column, normal, flex-start, nowrap);
+                @include dimensions(40px, 40px, 0, 0, 0, 0, 16px);
+            }
+
+        }
+
+        .copyrithing {
+            @include flex(row, flex-start, center, nowrap);
+            @include dimensions(200px, 20px, 0, 0, 0, 0, 32px);
+
+            a {
+                color: $white;
+                font-weight: lighter;
+                font-size: 15px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .footer_right {
+        @include flex(column, space-between, flex-end, nowrap);
+        @include dimensions(50%, auto, 100px, 0, 120px, 100px, 100px);
+
+        .slogan {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px 0px;
+            gap: 20px;
+            width: 100%;
+
+            .slogan-napis {
+
+                .slogan-white {
+                    @include font(400, 40px, 40px, left);
+                    color: $white;
+                    letter-spacing: 5px;
+                    text-transform: uppercase;
+
+                    span {
+                        @include font(800, 40px, 40px, left);
+                    }
+                }
+
+                .slogan-orange {
+                    @include font(400, 40px, 40px, left);
+                    color: $orange;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+
+                    span {
+                        @include font(800, 40px, 40px, left);
+                    }
+                }
+
+                .slogan-www {
+                    @include font(400, 20px, 40px, left);
+                    color: $white;
+                    letter-spacing: 10px;
+                }
+            }
+
+            .slogan-rectangle {
+                width: 100%;
+                height: 30px;
+                background-color: $orange;
+            }
+        }
+
+        .footer_partners {
+            @include flex(column, normal, flex-start, nowrap);
+            @include dimensions(100%, 116px, 0, 0, 0, 0, 20px);
+
+            p {
+                @include font(500, 15px, 20px, left);
+                @include dimensions(124px, 20px, 0, 0, 0, 0, 0);
+                letter-spacing: 7px;
+                color: $white;
+                opacity: 0.7;
+                text-transform: uppercase;
+            }
+
+            .footer_partners_logos {
+                @include flex(row, normal, center, nowrap);
+                @include dimensions(auto, auto, 0, 0, 0, 0, 60px);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .footer {
+        height: 1000px;
+        background: url("/img/contact_us/footer/FOOTER_mobile.png") ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include flex(row, normal, normal, nowrap);
+
+        .footer_left {
+            position: relative;
+            gap: 250px;
+        }
+
+        .footer_right {
+            position: relative;
+            top: 170px;
+            right: 45%;
+            height: 50%;
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .footer {
+        height: 1000px;
+        background: url("/img/contact_us/footer/FOOTER_mobile.png") ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include flex(row, normal, normal, nowrap);
+
+        .footer_left {
+            position: relative;
+            gap: 250px;
+
+        }
+
+        .footer_right {
+            position: relative;
+            right: 68%;
+            width: 100%;
+        }
+    }
+}

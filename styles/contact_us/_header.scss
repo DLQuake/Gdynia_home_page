@@ -1,0 +1,195 @@
+header {
+    height: 100px;
+}
+
+.MENU {
+    @include dimensions(auto, 60px, 20px, 40px, 0, 0, 50px);
+    @include flex(row, center, center, nowrap);
+    @include absolute(0%, 0%, -0.94%, 48.36%);
+    background: $white;
+
+    .MENU_contains {
+        @include flex(row-reverse, space-between, center, wrap);
+        @include dimensions(1300px, 67px, 0, 0, 0, 0, 32px);
+
+        .logo {
+            @include dimensions(100px, 67px, 0, 0, 0, 0, 0);
+        }
+
+        .topnav {
+            @include dimensions(674, 43.91px, 0, 0, 0, 0, 0);
+
+            .navbar {
+                @include flex(row, space-between, center, wrap);
+                @include dimensions(auto, auto, 0, 0, 0, 0, 50px);
+                list-style: none;
+
+                a {
+                    @include font(600, 14px, 21px, right);
+                    height: 22px;
+                    color: $dark-blue;
+                    text-decoration: none;
+
+                    &.contact {
+                        border: 1px solid $orange;
+                        border-radius: 6px;
+                        color: $orange;
+                        padding: 14px;
+
+                        &:hover {
+                            background-color: $orange;
+                            color: $white;
+                            transition: 0.6s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        .options {
+            @include flex(row, center, center, nowrap);
+            @include dimensions(210px, 40px, 5px, 10px, 5px, 10px, 24px);
+            background: #F7F8F7;
+            border-radius: 4px;
+
+            .languages {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 20px;
+
+                p {
+                    display: none;
+                    @include font(700, 16px, 24px, center);
+                    color: $dark-blue;
+                    text-transform: uppercase;
+                }
+            }
+
+            .tools {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 24px;
+            }
+        }
+
+        .hamburger{
+            background-color: transparent;
+            border: 0;
+            display: none;
+            color: #000000;
+            font-size: 50px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+
+    header {
+        height: 220px;
+    }
+
+    .MENU {
+        padding: 20px 0;
+
+        .MENU_contains {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+
+            .logo{
+                position: relative;
+                left: 3%;
+            }
+
+            .topnav {
+                display: none;
+            }
+
+            .options {
+                @include flex(row, center, center, nowrap);
+                @include dimensions(100%, 56px, 0, 0, 0, 0, 70px);
+                background-color: transparent;
+
+                width: 100%;
+                border-bottom: 1px solid #E0E0E0;
+                .languages {
+                    p {
+                        display: block;
+
+                    }
+                    .pl {
+                        display: none;
+                    }
+                }
+            }
+
+            .hamburger {
+                display: block;
+
+                .dropbtn {
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+
+                    .bar {
+                        display: block;
+                        width: 40px;
+                        height: 7px;
+                        background: #000000;
+                        border-radius: 10px;
+                        margin: 5px;
+                    }
+                }
+
+                .dropdown-content {
+                    display: none;
+                    right: 0;
+                    z-index: 1;
+                    list-style: none;
+
+                    @include absolute(0px, 0, 170px, 0);
+                    height: 620px;
+                    padding: 50px;
+                    background: #F5F8FC;
+
+                    a {
+                        @include flex(column, center,  center, nowrap);
+                        @include font(700, 16px, 24px, center);
+                        color: $dark-blue;
+                        text-decoration: none;
+                        padding: 20px;
+
+
+                        &.contact {
+                            border: 1px solid $orange;
+                            border-radius: 6px;
+                            color: $orange;
+                            padding: 14px;
+
+                            position: relative;
+                            top: 300px;
+
+                            &:hover {
+                                background-color: $orange;
+                                color: $white;
+                                transition: 0.6s ease;
+                            }
+                        }
+                    }
+                }
+
+                .show {
+                    display: block;
+                }
+            }
+        }
+    }
+}
