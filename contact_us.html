@@ -14,172 +14,141 @@
 
 <body>
 
-    <header>
-        <div class="MENU">
-            <div class="MENU_contains">
-                <div class="options">
-                    <div class="options languages">
-                        <img class="en" src="img/contact_us/header/united-kingdom.png" alt="Język angielski">
-                        <p class="en">en</p>
-                        <img class="pl"src="img/contact_us/header/poland.png" alt="Język polski">
-                        <p class="pl">pl</p>
-                    </div>
-
-                    <div class="options tools">
-                        <img src="img/contact_us/header/zmniejszenie.png" alt="Zmniejszenie czcionki">
-                        <img src="img/contact_us/header/zwiekszenie.png" alt="Zwiekszenie czcionki">
-                        <img src="img/contact_us/header/theme_swicher.png" alt="Zmiana motywu z jasnego na ciemny i odwrotnie">
-                    </div>
+    <header class="header">
+        <div class="header__container">
+            <div class="options">
+                <div class="options__languages">
+                    <img class="options__languages-item" src="img/contact_us/header/united-kingdom.png" alt="Język angielski">
+                    <p class="options__languages-napis">en</p>
+                    <img class="options__languages-item options__languages-item--pl "src="img/contact_us/header/poland.png" alt="Język polski">
+                    <p class="options__languages-napis options__languages-napis--pl">pl</p>
                 </div>
-
-                <nav class="topnav">
-                    <ul class="navbar">
-                        <li><a href="#">Business Services</a></li>
-                        <li><a href="#">Why Gdynia</a></li>
-                        <li><a href="#">Sectors</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a class="contact" href="contact_us.html">Contact us</a></li>
-                    </ul>
-                </nav>
-
-                <div class="logo">
-                    <a href="index.html"><img src="img/home_page/header/LOGO_blue.png" alt="Logo Gdynia"></a>
+                <div class="options__tools">
+                    <img class="options_tools-item" src="img/contact_us/header/zmniejszenie.png" alt="Zmniejszenie czcionki">
+                    <img class="options_tools-item" src="img/contact_us/header/zwiekszenie.png" alt="Zwiekszenie czcionki">
+                    <img class="options_tools-item" src="img/contact_us/header/theme_swicher.png" alt="Zmiana motywu z jasnego na ciemny i odwrotnie">
                 </div>
+            </div>
 
-                <div class="hamburger">
-                    <button onclick="mobile_menu()" class="dropbtn">
-                        <div class="dropbtn bar"></div>
-                        <div class="dropbtn bar"></div>
-                        <div class="dropbtn bar"></div>
-                    </button>
+            <nav class="navigation">
+                <button class="navigation__button" id="hamburger">
+                    <div class="navigation__button-rectangle"></div>
+                    <div class="navigation__button-rectangle"></div>
+                    <div class="navigation__button-rectangle"></div>
+                </button>
 
-                    <ul id="myDropdown" class="dropdown-content">
-                        <li><a href="#">Business Services</a></li>
-                        <li><a href="#">Why Gdynia</a></li>
-                        <li><a href="#">Sectors</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a class="contact" href="contact_us.html">Contact us</a></li>
-                    </ul>
-                </div>
+                <ul class="navigation__list" id="navUL">
+                    <li><a class="navigation__list-item" href="#">Business Services</a></li>
+                    <li><a class="navigation__list-item"href="#">Why Gdynia</a></li>
+                    <li><a class="navigation__list-item"href="#">Sectors</a></li>
+                    <li><a class="navigation__list-item"href="#">Testimonials</a></li>
+                    <li><a class="navigation__list-item navigation__list-item--contact" href="contact_us.html">Contact us</a></li>
+                </ul>
+            </nav>
+
+            <div class="logo">
+                <a class="logo__link" href="index.html">
+                    <img class="logo__image" src="img/contact_us/header/LOGO_blue.png" alt="logo">
+                </a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section>
-            <div class="title">
-                <div class="title_rectangle"></div>
-                <div class="title_napis">Contact us</div>
-                <img src="img/contact_us/title/tlo_do_tytulu.png" alt="Tło">
+
+    <section class="title">
+        <div class="title__rectangle"></div>
+        <div class="title__napis">Contact us</div>
+    </section>
+
+
+    <section class="dane-adresowe">
+        <div class="dane-adresowe__left">
+            <img class="dane-adresowe__image-pin" src="img/contact_us/dane_adresowe/PIN.png" alt="">
+        </div>
+        <div class="dane-adresowe__right">
+            <div class="dane-adresowe__zawartosc">
+                <p class="dane-adresowe__zawartosc-item dane-adresowe__zawartosc-item--title">Contact us</p>
+                <p class="dane-adresowe__zawartosc-item dane-adresowe__zawartosc-item--nazwa">invest in gdynia</p>
+                <p class="dane-adresowe__zawartosc-item">al. Zwycięstwa 96/98</p>
+                <p class="dane-adresowe__zawartosc-item">pok. F1.02 (budynek PPNT)</p>
+                <p class="dane-adresowe__zawartosc-item">81-451 Gdynia, Polska</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section>
-            <div class="dane_adresowe">
-                <div class="dane_adresowe_left">
-                    <img class="dane_adresowe_left__pin" src="img/contact_us/dane_adresowe/PIN.png" alt="PIN">
-                    <img class="dane_adresowe_left__mapa" src="img/contact_us/dane_adresowe/mapa.png" alt="mapa">
-                </div>
-                <div class="dane_adresowe_right">
-                    <div class="dane_adresowe_right__zawartosc">
-                        <h2>Contact us</h2>
-                        <div class="dane_adresowe_right__adres">
-                            <h3>invest in gdynia</h3>
-                            <p>al. Zwycięstwa 96/98</p>
-                            <p>pok. F1.02 (budynek PPNT)</p>
-                            <p>81-451 Gdynia, Polska</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section>
-            <div class="kierownictwo">
-                <div class="kierownik">
-                    <img src="img/contact_us/kierownictwo/kierownik_1.png" alt="kierownik 1">
-                    <div class="kierownik_dane">
-                        <div class="kierownik_dane_osobowe">
-                            <h2>Justyna Patyk</h2>
-                            <p>Kierownik Centrum Obsługi Inwestora “Invest in Gdynia”</p>
-                        </div>
-                        <div class="kierownik_dane_kontaktowe">
-                            <div class="email">j.patyk@gdynia.pl</div>
-                            <div class="telefon">+48 503 436 039</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="kierownik">
-                    <img src="img/contact_us/kierownictwo/kierownik_2.png" alt="">
-                    <div class="kierownik_dane">
-                        <div class="kierownik_dane_osobowe">
-                            <h2>Monika Marszałkowska</h2>
-                            <p>Specjalista ds. inwestycji zagranicznych Centrum Obsługi Inwestora “Invest in Gdynia”</p>
-                        </div>
-                        <div class="kierownik_dane_kontaktowe">
-                            <div class="email">m.marszalkowska@gdynia.pl</div>
-                            <div class="telefon">+48 503 435 917</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="kierownik">
-                    <img src="img/contact_us/kierownictwo/kierownik_3.png" alt="">
-                    <div class="kierownik_dane">
-                        <div class="kierownik_dane_osobowe">
-                            <h2>Ewa Zajko</h2>
-                            <p>Specjalista ds. inwestycji zagranicznych Centrum Obsługi Inwestora “Invest in Gdynia”</p>
-                        </div>
-                        <div class="kierownik_dane_kontaktowe">
-                            <div class="email">e.zajko@gdynia.pl</div>
-                            <div class="telefon">+48 669 888 854</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer">
-            <div class="footer_left">
-                <img class="logo1" src="img/contact_us/footer/footer_logo1.png" alt="Logo 1">
-                <div class="footer_tekst">
-                    <div class="email">office@investingdynia.pl</div>
-                    <div class="adres">al. Zwycięstwa 96/98,  81-451 Gdynia</div>
-                    <a class="linkedin" href="https://www.linkedin.com/">
-                        <img class="linkedin" src="img/contact_us/footer/linkedin.png" alt="linkedin">
-                    </a>
-                </div>
-                <div class="copyrithing">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookies</a>
+    <section class="kierownictwo">
+        <div class="kierownictwo__container">
+            <div class="kierownictwo__worker">
+                <img class="kierownictwo__worker__image" src="img/contact_us/kierownictwo/kierownik_1.png" alt="kierownik 1">
+                <div class="kierownictwo__worker__dane">
+                    <p class="kierownictwo__worker__dane-item kierownictwo__worker__dane-item--imie-nazwisko">Justyna Patyk</p>
+                    <p class="kierownictwo__worker__dane-item">Kierownik Centrum Obsługi Inwestora “Invest in Gdynia”</p>
+                    <p class="kierownictwo__worker__dane-item kierownictwo__worker__dane-item--email">j.patyk@gdynia.pl</p>
+                    <p class="kierownictwo__worker__dane-item kierownictwo__worker__dane-item--tel">+48 503 436 039</p>
                 </div>
             </div>
 
-            <div class="footer_right">
-                <div class="slogan">
-                    <div class="slogan-napis">
-                        <div class="slogan-white">Young<span>city</span></div>
-                        <div class="slogan-orange">modern<span>business</span></div>
-                        <div class="slogan-www">www.investingdynia.pl</div>
-                    </div>
-                    <div class="slogan-rectangle"></div>
-                    <!-- <img class="slogan" src="img/contact_us/footer/SLOGAN.png" alt="Slogan"> -->
+            <div class="kierownictwo__worker">
+                <img class="kierownictwo__worker__image" src="img/contact_us/kierownictwo/kierownik_2.png" alt="kierownik 2">
+                <div class="kierownictwo__worker__dane">
+                    <p class="kierownictwo__worker__dane-item kierownictwo__worker__dane-item--imie-nazwisko">Monika Marszałkowska</p>
+                    <p class="kierownictwo__worker__dane-item">Specjalista ds. inwestycji zagranicznych Centrum Obsługi Inwestora “Invest in Gdynia”</p>
+                    <p class="kierownictwo__worker__dane-item kierownictwo__worker__dane-item--email">m.marszalkowska@gdynia.pl</p>
+                    <p class="kierownictwo__worker__dane-item kierownictwo__worker__dane-item--tel">+48 503 435 917</p>
                 </div>
+            </div>
 
-                <div class="footer_partners">
-                    <p>partners:</p>
-                    <div class="footer_partners_logos">
-                        <img src="img/contact_us/footer/footer_logo2.png" alt="Logo 2">
-                        <img src="img/contact_us/footer/footer_logo3.png" alt="Logo 3">
-                        <img src="img/contact_us/footer/footer_logo4.png" alt="Logo 4">
-                    </div>
+            <div class="kierownictwo__worker">
+                <img class="kierownictwo__worker__image" src="img/contact_us/kierownictwo/kierownik_3.png" alt="kierownik 3">
+                <div class="kierownictwo__worker__dane">
+                    <p class="kierownictwo__worker__dane-item kierownictwo__worker__dane-item--imie-nazwisko">Ewa Zajko</p>
+                    <p class="kierownictwo__worker__dane-item">Specjalista ds. inwestycji zagranicznych Centrum Obsługi Inwestora “Invest in Gdynia”</p>
+                    <p class="kierownictwo__worker__dane-item kierownictwo__worker__dane-item--email">e.zajko@gdynia.pl</p>
+                    <p class="kierownictwo__worker__dane-item kierownictwo__worker__dane-item--tel">+48 669 888 854</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer__left">
+            <img class="footer__logo" src="img/contact_us/footer/footer_logo1.png" alt="Logo 1">
+            <div class="footer__tekst">
+                <div class="footer__tekst-email">office@investingdynia.pl</div>
+                <div class="footer__tekst-adres">al. Zwycięstwa 96/98,  81-451 Gdynia</div>
+                <a class="footer__tekst-link footer__tekst-link--linkedin" href="https://www.linkedin.com/">
+                    <img class="footer__tekst-image footer__tekst-image--linkedin" src="img/contact_us/footer/linkedin.png" alt="linkedin">
+                </a>
+            </div>
+            <div class="footer__copyrithing">
+                <a class="footer__copyrithing-item" href="#">Privacy Policy</a>
+                <a class="footer__copyrithing-item" href="#">Cookies</a>
+            </div>
+        </div>
+
+        <div class="footer__right">
+            <div class="footer__slogan">
+                <div class="footer__slogan-napis">
+                    <div class="footer__slogan-white">Young<span class="footer__slogan-orange--bold">city</span></div>
+                    <div class="footer__slogan-orange">modern<span class="footer__slogan-orange--bold">business</span></div>
+                    <div class="footer__slogan-www">www.investingdynia.pl</div>
+                </div>
+                <div class="footer__slogan-rectangle"></div>
+            </div>
+
+            <div class="footer__partners">
+                <p class="footer__partners-title">partners:</p>
+                <div class="footer__partners-logos">
+                    <img class="footer__partners-image" src="img/contact_us/footer/footer_logo2.png" alt="Logo 2">
+                    <img class="footer__partners-image" src="img/contact_us/footer/footer_logo3.png" alt="Logo 3">
+                    <img class="footer__partners-image" src="img/contact_us/footer/footer_logo4.png" alt="Logo 4">
                 </div>
             </div>
         </div>
     </footer>
+
 
     <script src="js/mobile_menu.js"></script>
 </body>
