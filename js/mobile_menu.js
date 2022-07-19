@@ -1,16 +1,6 @@
-function mobile_menu() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+const hamburger = document.getElementById('hamburger');
+const navul = document.getElementById('navUL');
 
-window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-        let dropdowns = document.getElementsByClassName("dropdown-content");
-        let i;
-        for (i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
+hamburger.addEventListener('click', () => {
+    navul.classList.toggle('show');
+});
