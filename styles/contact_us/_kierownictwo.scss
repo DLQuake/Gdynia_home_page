@@ -1,47 +1,71 @@
 .kierownictwo {
-    @include flex(row, center, center, wrap);
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 112px 0px;
+    gap: 80px;
+    background: #FFFFFF;
 
-    .kierownik {
-        @include flex(column, center, flex-start, wrap);
-        @include dimensions(316.67px, auto, 0, 0, 0, 0, 36px);
-        margin: 80px;
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+        flex-wrap: wrap;
+    }
 
-        .kierownik_dane {
-            @include flex(column, normal, flex-start, nowrap);
-            @include dimensions(316.67px, 250px, 0, 0, 0, 0, 24px);
+    &__worker {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 36px;
+        
 
-            .kierownik_dane_osobowe {
-                @include flex(column, normal, center, nowrap);
-                @include dimensions(316.67px, 120px, 0, 0, 0, 0, 16px);
+        &__dane {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 24px;
 
-                h2 {
-                    @include font(700, 19px, 32px, center);
+
+            &-item {
+                width: 316.67px;
+                height: 70px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #4F4F4F;
+                text-align: center;
+
+                &--imie-nazwisko {
+                    width: 316.67px;
                     height: 32px;
-                    color: $orange;
+                    font-weight: 700;
+                    font-size: 19px;
+                    line-height: 32px;
+                    text-align: center;
+                    color: #FF5E00;
                     text-transform: uppercase;
                 }
 
-                p {
-                    @include dimensions(316.67px, 72px, 0, 0, 0, 0, 0);
-                    @include font(400, 16px, 24px, center);
-                    color: #4F4F4F;
-                }
-            }
-
-            .kierownik_dane_kontaktowe {
-                @include flex(column, normal, center, nowrap);
-                @include dimensions(316.67px, 106px, 0, 0, 0, 0, 0);
-                margin-top: 30px;
-
-                .email {
-                    @include font(600, 14px, 32px, center);
-                    color: $dark-blue;
+                &--email {
+                    height: 40px;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 32px;
+                    text-align: center;
+                    color: #182B49;
                 }
 
-                .telefon {
-                    @include font(600, 16px, 32px, center);
-                    color: $dark-blue;
+                &--tel {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 32px;
+                    text-align: center;
+                    color: #182B49;
                 }
             }
         }

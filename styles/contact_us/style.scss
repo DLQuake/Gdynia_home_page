@@ -1,31 +1,9 @@
-@mixin flex($direction, $justify, $items, $wrap) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $items;
-    flex-wrap: $wrap;
-}
-
-@mixin absolute($left, $right, $top, $bottom) {
-    position: absolute;
-    left: $left;
-    right: $right;
-    top: $top;
-    bottom: $bottom;
-}
-
-@mixin dimensions($width, $height, $pad1, $pad2, $pad3, $pad4, $gap) {
-    width: $width;
-    height: $height;
-    padding: $pad1 $pad2 $pad3 $pad4;
-    gap: $gap;
-}
-
-@mixin font($weight, $size, $line_height, $text_align) {
-    font-weight: $weight;
-    font-size: $size;
-    line-height: $line_height;
-    text-align: $text_align;
+* {
+    font-family: 'Metropolis';
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 $white: #FFFFFF;
@@ -38,9 +16,3 @@ $gray: #333333;
 @import "dane_adresowe";
 @import "kierownictwo";
 @import "footer";
-
-body {
-    font-family: 'Metropolis';
-    font-style: normal;
-    margin: 0;
-}

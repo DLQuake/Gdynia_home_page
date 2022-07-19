@@ -1,36 +1,45 @@
 .title {
-    @include dimensions(100%, 504px, 0, 0, 0, 0, 0);
+    width: 100%;
+    height: 504px;
+    margin-top: 40px;
+    background: url("../../img/contact_us/title/tlo_do_tytulu.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    img {
-        @include dimensions(100%, 504px, 0, 0, 0, 0, 0);
-    }
 
-    .title_rectangle {
-        @include absolute(0, 0, 450px, 0);
-        @include dimensions(126px, 52px, 0, 0, 0, 0, 0);
+    &__rectangle {
+        position: absolute;
+        width: 126px;
+        height: 52px;
+        left: 1px;
+        top: 482px;
         background: $orange;
     }
 
-    .title_napis {
-        @include absolute(200px, 0, 440px, 0);
-        @include font(700, 68.79px, 72px, left);
+    &__napis {
+        position: absolute;
+        left: 166px;
+        top: 471px;
+        font-weight: 700;
+        font-size: 68.79px;
+        line-height: 72px;
         letter-spacing: -1.5px;
         color: $white;
         text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-        height: 70px;
     }
 }
 
+@media (max-width: 425px) {
+    .title__napis {
+        position: absolute;
+        left: 5%;
+        top: 40%;
+        font-size: 60px;
+        line-height: 40px;
+    }
 
-@media ( max-width: 600px) {
-    .title {
-        .title_rectangle {
-            display: none;
-        }
-
-        .title_napis {
-            font-size: 60px;
-            @include absolute(10%, 0, 50%, 0);
-        }
+    .title__rectangle {
+        display: none;
     }
 }

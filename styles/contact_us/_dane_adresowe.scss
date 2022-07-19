@@ -1,91 +1,86 @@
-.dane_adresowe {
-    width: 100%;
-    @include flex(row, center, center, wrap);
+.dane-adresowe {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    height: 900px;
 
-    .dane_adresowe_left {
+    &__left {
+        background: url("../../img/contact_us/dane_adresowe/mapa.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         width: 50%;
-
-        .dane_adresowe_left__mapa {
-            @include dimensions(100%, 1189.38px, 0, 0, 0, 0, 0);
-        }
-
-        .dane_adresowe_left__pin {
-            @include absolute(18%, 0, 980px, 0);
-            width: auto;
-        }
+        height: 100%;
     }
 
-    .dane_adresowe_right {
-        @include dimensions(50%, 1189.38px, 0, 0, 0, 0, 0);
-        background-color: #F5F8FC;
-
-        .dane_adresowe_right__zawartosc {
-            margin: 200px;
-            @include flex(column, normal, flex-start, nowrap);
-            @include dimensions(auto, 420px, 0, 0, 0, 0, 64px);
-
-            h2 {
-                height: 52.64px;
-                @include font(400, 32px, 40px, left);
-                color: $dark-blue;
-            }
-
-            .dane_adresowe_right__adres {
-                @include flex(column, normal, flex-start, nowrap);
-                @include dimensions(auto, 152px, 0, 0, 0, 0, 8px);
-
-                h3 {
-                    @include font(700, 19px, 32px, left);
-                    @include dimensions(178px, 32px, 0, 0, 0, 0, 0);
-                    color: $gray;
-                    text-transform: uppercase;
-                }
-
-                p {
-                    @include font(400, 19.2px, 0px, left);
-                    @include dimensions(250px, 32px, 0, 0, 0, 0, 0);
-                    color: $gray;
-                }
-            }
-        }
+    &__image-pin {
+        position: relative;
+        left: calc(40% - 50px);
+        top: calc(35% - 50px);
     }
-}
 
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 112px 0px 0px 112px;
+        width: 50%;
+        height: 100%;
+        background: #F5F8FC;
+    }
 
-@media (max-width: 900px) {
-
-    .dane_adresowe {
-        @include flex(column, normal, center, nowrap);
+    &__zawartosc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         padding: 0px;
+        gap: 8px;
 
-        .dane_adresowe_left {
-            width: 100%;
-            .dane_adresowe_left__mapa {
-                height: 50%;
+
+        &-item {
+            font-weight: 400;
+            font-size: 19.2px;
+            line-height: 32px;
+            color: $gray;
+
+            &--title {
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 40px;
+                color: #182B49;
+                margin-bottom: 100px;
             }
 
-            .dane_adresowe_left__pin {
-                @include absolute(35%, 0, 1050px, 0);
-                width: auto;
+            &--nazwa {
+                font-weight: 700;
+                font-size: 19px;
+                line-height: 32px;
+                color: $gray;
+                text-transform: uppercase;
             }
-        }
-
-        .dane_adresowe_right {
-            @include dimensions(100%, 50%, 0, 0, 0, 0, 0);
         }
     }
 }
 
+@media (max-width: 940px) {
+    .dane-adresowe {
+        flex-direction: column;
+        padding: 0px;
+        height: 900px;
+        width: 100%;
 
-@media ( max-width: 600px) {
+        &__left {
+            width: 100%;
+            height: 100%;
+        }
 
-    .dane_adresowe {
-        .dane_adresowe_left {
-            .dane_adresowe_left__pin {
-                position: relative;
-                top: 350px;
-                width: auto;
-            }
+        &__right {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
