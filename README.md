@@ -17,13 +17,19 @@ Wykorzystano HTML, CSS oraz JavaScript
 * Wystylowanie strony głównej za pomocą CSS
 * Zrobienie slidera za pomocą Javascriptu
 
-### Od 11.07.2022 r. -15.07.2022 r.
+### Od 11.07.2022 r. - 15.07.2022 r.
 
 * Nauka SASS oraz metodologi BEM i wykorzystanie jej w praktyce
 * Stworzenie struktury strony Contact za pomocą HTML
 * Wystylowanie strony Contact za pomocą SCSS
 * Zrobienie mobilnego menu za pomocą SCSS oraz JavaScriptu
 
+### Od 18.07.2022 r. - 22.07.2022 r.
+
+* Poprawa uwag dotyczcych pracy z poprzedniego tygodnia
+* Stworzenie struktury strony Why Gdynia za pomocą HTML
+* Wystylowanie strony Why Gdynia za pomocą SASS
+* Przerobienie mobilnego menu w HTML SASS oraz JavaScript,
 
 ## Pobranie i Klonowanie
 Można pobrać repozytorium na dwa sposoby:
