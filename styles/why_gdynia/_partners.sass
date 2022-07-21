@@ -1,0 +1,50 @@
+.partners
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 0px 0px 88px
+    background: #F5F8FD
+
+    &__title
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 88px 165px 72px
+        height: 224px
+
+        &-napis
+            height: 64px
+            font-weight: 500
+            font-size: 32px
+            line-height: 40px
+            text-align: center
+            color: #5F6F87
+
+    &__logos
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        padding: 0px 165px
+        gap: 112px
+        height: 84px
+
+@media (max-width: 1024px)
+
+    .partners
+        padding: 0px 0px 88px
+        background: #F5F8FD
+
+    .partners__title
+        padding: 0
+
+    .partners__logos
+        justify-content: center
+        align-items: center
+        padding: 0px 0px 88px 0px
+        gap: 2px
+
+        &-image
+            width: 25vw

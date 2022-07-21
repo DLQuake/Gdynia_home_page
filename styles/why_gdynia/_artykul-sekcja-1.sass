@@ -1,0 +1,97 @@
+.artykul-sekcja-1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 112px 0px 200px
+    gap: 80px
+    height: 1294px
+    background: #FFFFFF
+
+    &__tresc
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding: 0px
+        gap: 97px
+
+        height: 329px
+
+        &-text
+            width: 860px
+            height: 192px
+            font-weight: 400
+            font-size: 16px
+            line-height: 32px
+            text-align: justify
+            color: #333333
+            opacity: 0.96
+
+            &--tytul
+                width: 860px
+                height: 40px
+                font-weight: 400
+                font-size: 28px
+                line-height: 40px
+                color: #182B49
+
+    &__obraz
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        padding: 0px
+        gap: 8px
+
+        width: 976px
+        height: 595px
+
+        &-img
+            width: 976px
+            height: 549px
+            object-fit: cover
+            object-position: center
+
+        &-text
+            width: 89px
+            height: 20px
+            font-weight: 400
+            font-size: 12px
+            line-height: 20px
+            color: #6F7896
+
+
+@media (max-width: 1000px)
+
+    .artykul-sekcja-1
+        gap: 450px
+        padding: 0px
+        height: 1500px
+
+    .artykul-sekcja-1__tresc
+        gap: 150px
+
+        &-text
+            width: 100%
+            padding: 30px
+
+            &--tytul
+                text-align: center
+
+    .artykul-sekcja-1__obraz
+        width: 100%
+        padding: 20px
+        gap: 20px
+        height: 595px
+        &-img
+            width: 100%
+            height: 549px
+            object-fit: cover
+            object-position: center
+        &-text
+            width: 100%
+            height: 20px
+            font-weight: 400
+            font-size: 12px
+            line-height: 20px
+            color: #6F7896

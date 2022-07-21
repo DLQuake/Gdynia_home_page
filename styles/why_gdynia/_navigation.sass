@@ -1,0 +1,95 @@
+.navigation
+    width: 674px
+
+    &__button
+        background-color: transparent
+        border: 0
+        display: none
+        color: #000000
+        font-size: 50px
+        cursor: pointer
+
+
+    &__list
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        align-items: center
+        padding: 0px
+        gap: 32px
+        list-style: none
+
+        &-item
+            font-weight: 600
+            font-size: 16px
+            line-height: 21px
+            color: $dark-blue
+            text-decoration: none
+            height: 22px
+
+            &--contact
+                border: 1px solid $orange
+                border-radius: 6px
+                color: $orange
+                padding: 14px
+
+                &:hover
+                    background-color: $orange
+                    color: $white
+                    transition: 0.6s ease
+
+
+@media (max-width: 1120px)
+    .navigation__button
+        display: block
+        position: absolute
+        right: 5%
+
+        &-rectangle
+            width: 40px
+            height: 7px
+            background: #000000
+            border-radius: 10px
+            margin: 5px
+
+    .navigation__list
+        display: none
+        right: 0
+        z-index: 1
+        list-style: none
+        position: absolute
+        top: 140px
+        left: 0px
+        height: 84vh
+        padding: 50px
+        background: #F5F8FC
+
+        &-item
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            font-weight: 700
+            font-size: 16px
+            line-height: 24px
+            text-align: center
+            color: $dark-blue
+            text-decoration: none
+            padding: 40px
+
+            &--contact
+                border: 1px solid $orange
+                border-radius: 6px
+                color: $orange
+                padding: 20px
+
+                position: relative
+                top: 20vh
+
+                &:hover
+                    background-color: $orange
+                    color: $white
+                    transition: 0.6s ease
+
+    .show
+        display: block

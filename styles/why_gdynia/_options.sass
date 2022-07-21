@@ -1,0 +1,75 @@
+.options
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 8px
+    gap: 24px
+    width: 200px
+    height: 40px
+    background: #F7F8F7
+    border-radius: 4px
+
+    &__languages
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 0px
+        gap: 20px
+
+        &-item
+            width: 20px
+            height: 20px
+
+        &-napis
+            display: none
+            font-weight: 700
+            font-size: 20px
+            line-height: 24px
+            color: $dark-blue
+            text-transform: uppercase
+            height: 22px
+
+
+
+    &__tools
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 0px
+        gap: 20px
+
+@media (max-width: 1120px)
+    .options
+        justify-content: space-around
+
+        width: 100%
+        height: 56px
+        gap : 70px
+
+        background-color: transparent
+        border-bottom: 1px solid #E0E0E0
+
+        &__languages
+            justify-content: space-around
+            align-items: center
+            padding: 0px
+
+            &-item
+                width: 25px
+                height: 25px
+
+                &--pl
+                    display: none
+
+            &-napis
+                display: block
+
+                &--pl
+                    display: none
+
+        &__tools
+            gap: 24px
+
+            &-item
+                width: 30px
+                height: 30px
